@@ -1,0 +1,32 @@
+//Nombre: Tomas Manfredi
+//TP Nro: 1
+//EJ Nro: 01
+/*Comentarios: Hacer un programa para un cajero autom�tico
+para ingresar un importe a retirar y convertir el mismo en
+la cantidad de billetes de $ 1.000, $ 500, $ 200 y $ 100 a entregar
+*/
+#include<iostream>
+using namespace std;
+
+int main (void){
+    int importe, mil, qui, doc, cien, X;
+
+    cout << "Ingrese el importe a retirar: ";
+    cin >> importe;
+
+    mil = importe / 1000;
+    X = importe % 1000;
+    qui = X / 500;
+    X = X % 500;
+    doc = X / 200;
+    X = X % 200;
+    cien = X / 100;
+
+    cout << "Usted recibira billetes de" << endl;
+    cout << "$1000: " << mil << endl;
+    cout << "$500: " << qui << endl;
+    cout << "$200: " << doc << endl;
+    cout << "$100: " << cien;
+
+	return 0;
+}
